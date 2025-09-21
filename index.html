@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="sl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prihajamo boljši</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+  <style>
+
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      display: grid;
+      place-items: center;
+      font-family:  "Roboto", Arial, sans-serif;
+      color: #333;
+      overflow: hidden; /* keep icons from creating scrollbars */
+      animation: bgShift 20s ease-in-out infinite;
+      background: #000;
+      /*background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 40%, rgba(207, 189, 0, 0.8) 50%, rgba(0, 0, 0, 1) 64%, rgba(0, 0, 0, 1) 100%);*/
+    }
+    .container-wrapper{
+      display: flex;
+      justify-content: center;
+    }
+.container-wrapper--img{
+  width: 400px;
+  position: relative;
+}
+.text--center{
+  text-align: center;
+}
+
+.text--action{
+      color: #CF0020;
+      font-size: 90px;
+      font-weight: 900;
+    }
+.headline{
+  color: #fff;
+  text-transform: uppercase;
+}
+.Logo_text{
+ color: gold;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 100px;
+  font-family: Futura;
+  background-color: #666666;
+  text-shadow: 1px 4px 4px #555;
+  -webkit-background-clip: text;
+    -moz-background-clip: text;
+
+}
+
+p{
+  color: #fff;
+}
+
+
+.wrap{
+      width: min(100%, 1040px);
+      text-align: center;
+    }
+
+
+    .dot{ width: .5rem; height: .5rem; border-radius: 50%; background: var(--accent); box-shadow: 0 0 18px var(--accent); }
+
+
+    .sub{
+      margin: .75rem 0 2.2rem;
+      color: #CF0020;
+      font-size: clamp(.95rem, 1.7vw, 1.05rem);
+      font-weight: bold;
+    }
+    .sub time{
+       color: #ffffff; 
+       font-weight: 200;
+      }
+
+    .timer{
+      display: inline-grid;
+      grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+      gap: clamp(8px, 1.8vw, 18px);
+      align-items: end;
+      padding: clamp(16px, 2.2vw, 24px);
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+      box-shadow: var(--ring);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      font-variant-numeric: tabular-nums lining-nums;
+    }
+    .slot{
+      display: grid;
+      justify-items: center;
+      min-width: clamp(88px, 18vw, 140px);
+      padding: clamp(10px, 1.4vw, 16px) clamp(8px, 1.2vw, 14px);
+      background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(0,0,0,.1));
+      border-radius: 14px;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .slot::after{
+      content: "";
+      position: absolute; inset: 0;
+      background: radial-gradient(400px 60px at 50% -20px, rgba(124,92,255,.17), transparent 60%);
+      opacity: .6; pointer-events: none; z-index: -1;
+    }
+    .value{
+      font-size: clamp(2rem, 6.5vw, 4rem);
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: .02em;
+      color: #fff;
+
+    }
+    .label{
+      margin-top: .35rem;
+      font-size: .8rem;
+      color: #fff;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+    .sep{
+      align-self: center;
+      color: #ffffff;
+      opacity: .55;
+      font-size: clamp(1.8rem, 6vw, 3.2rem);
+      transform: translateY(-6%);
+      user-select: none;
+    }
+
+    .footer{
+      margin-top: 22px;
+      color: #fff;
+      font-size: .9rem;
+    }
+    .accent{ color: var(--accent) }
+
+    /* Mobile adjustments */
+    @media (max-width: 520px){
+      .timer{ grid-template-columns: 1fr 1fr; gap: 10px; }
+      .sep{ display: none; }
+      .slot{ min-width: auto; }
+    }
+
+    /* Motion preferences */
+    @media (prefers-reduced-motion: reduce){
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+
+
+  </style>
+</head>
+<body data-launch="2025-10-27T23:59:59Z">
+
+  <!-- Background icon layer -->
+  <div class="bg-icons" id="bgIcons"></div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <div class="container-wrapper">
+          <img class="container-wrapper--img" src="GOLD_Racoon_Vectorized.png" alt="LOGO Hoodie">
+        </div>
+        
+      </div>
+      <div class="col-sm">
+        <div class=" container-wrapper">
+          <div class="container-wrapper-content text--center">
+              <h1 class="Logo_text">Hoodie</h1>
+              <span class="text--action">AKCIJA!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <p class="sub">Naslednja priložnost: <time id="launch-date" aria-live="polite"></time></p>
+  
+      <section class="timer" role="timer" aria-live="polite" aria-atomic="true" aria-label="Countdown to launch">
+        <div class="slot"><span class="value" id="days">000</span><span class="label">DNI</span></div>
+        <div class="sep">:</div>
+        <div class="slot"><span class="value" id="hours">00</span><span class="label">UR</span></div>
+        <div class="sep">:</div>
+        <div class="slot"><span class="value" id="mins">00</span><span class="label">MINUT</span></div>
+        <div class="sep">:</div>
+        <div class="slot"><span class="value" id="secs">00</span><span class="label">SEKUND</span></div>
+      </section>
+  
+      <p class="footer" id="status">Odštevanje do začetka…</p>
+    </div>
+  </div>
+ 
+  <script>
+    (() => {
+      const pad = (n, len = 2) => String(n).padStart(len, "0");
+
+      // Read target from body attribute; default to 7 days from now if not set/invalid
+      const raw = document.body.getAttribute("data-launch");
+      let target = new Date(raw);
+      if (!raw || isNaN(target.getTime())) {
+        target = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
+      }
+
+      // Put a readable date into the <time> element
+      const tEl = document.getElementById("launch-date");
+      tEl.dateTime = target.toISOString();
+      try {
+        tEl.textContent = target.toLocaleString(navigator.language || "sl", {
+          dateStyle: "long",
+          timeStyle: "short"
+        });
+      } catch {
+        tEl.textContent = target.toString();
+      }
+
+      const $ = id => document.getElementById(id);
+      const daysEl = $("days"), hoursEl = $("hours"), minsEl = $("mins"), secsEl = $("secs");
+      const status = $("status");
+
+      const tick = () => {
+        const now = new Date();
+        let ms = target.getTime() - now.getTime();
+
+        if (ms <= 0) {
+          daysEl.textContent = "000";
+          hoursEl.textContent = "00";
+          minsEl.textContent = "00";
+          secsEl.textContent = "00";
+          clearInterval(timer);
+          return;
+        }
+
+        const SEC = 1000, MIN = 60 * SEC, HOUR = 60 * MIN, DAY = 24 * HOUR;
+        const d = Math.floor(ms / DAY);  ms -= d * DAY;
+        const h = Math.floor(ms / HOUR); ms -= h * HOUR;
+        const m = Math.floor(ms / MIN);  ms -= m * MIN;
+        const s = Math.floor(ms / SEC);
+
+        daysEl.textContent = pad(d, 3);
+        hoursEl.textContent = pad(h);
+        minsEl.textContent = pad(m);
+        secsEl.textContent = pad(s);
+
+        // Update accessible label
+        const parts = [];
+        if (d) parts.push(`${d} day${d !== 1 ? "s" : ""}`);
+        if (h) parts.push(`${h} hour${h !== 1 ? "s" : ""}`);
+        if (m) parts.push(`${m} minute${m !== 1 ? "s" : ""}`);
+        parts.push(`${s} second${s !== 1 ? "s" : ""}`);
+        status.setAttribute("aria-label", `Time remaining: ${parts.join(", ")}`);
+      };
+
+      // Initial paint & 1s updates
+      tick();
+      const timer = setInterval(tick, 1000);
+    })();
+  </script>
+
+</body>
+</html>
